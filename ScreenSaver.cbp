@@ -23,28 +23,13 @@
 				</Compiler>
 				<Linker>
 					<Add option="-static-libgcc" />
-					<Add option="-static-libstdc++" />
-					<Add library="kernel32" />
-					<Add library="user32" />
-					<Add library="gdi32" />
-					<Add library="winspool" />
-					<Add library="comdlg32" />
-					<Add library="advapi32" />
-					<Add library="shell32" />
-					<Add library="ole32" />
-					<Add library="oleaut32" />
-					<Add library="uuid" />
-					<Add library="odbc32" />
-					<Add library="odbccp32" />
-					<Add library="OpenGL32" />
-					<Add library="GLu32" />
-					<Add library="GLaux" />
-					<Add library="ddraw" />
-					<Add library="winmm" />
+					<Add library="C:\ldo\apps\CodeBlocks\MinGW\lib\libkernel32.a" />
+					<Add library="C:\ldo\apps\CodeBlocks\MinGW\lib\libuser32.a" />
+					<Add library="C:\ldo\apps\CodeBlocks\MinGW\lib\libwinmm.a" />
 				</Linker>
 			</Target>
 			<Target title="Win32 Debug">
-				<Option output="C:/Users/ldornbusch/Desktop/2del/Matrix22/src/Debug/matrix_reloaded.scr" prefix_auto="1" extension_auto="0" />
+				<Option output="Debug/matrix_reloaded.scr" prefix_auto="1" extension_auto="0" />
 				<Option object_output="Debug" />
 				<Option type="0" />
 				<Option compiler="gcc" />
@@ -60,24 +45,9 @@
 				</Compiler>
 				<Linker>
 					<Add option="-static-libgcc" />
-					<Add option="-static-libstdc++" />
-					<Add library="kernel32" />
-					<Add library="user32" />
-					<Add library="gdi32" />
-					<Add library="winspool" />
-					<Add library="comdlg32" />
-					<Add library="advapi32" />
-					<Add library="shell32" />
-					<Add library="ole32" />
-					<Add library="oleaut32" />
-					<Add library="uuid" />
-					<Add library="odbc32" />
-					<Add library="odbccp32" />
-					<Add library="OpenGL32" />
-					<Add library="GLu32" />
-					<Add library="GLaux" />
-					<Add library="ddraw" />
-					<Add library="winmm" />
+					<Add library="C:\ldo\apps\CodeBlocks\MinGW\lib\libkernel32.a" />
+					<Add library="C:\ldo\apps\CodeBlocks\MinGW\lib\libuser32.a" />
+					<Add library="C:\ldo\apps\CodeBlocks\MinGW\lib\libwinmm.a" />
 				</Linker>
 			</Target>
 		</Build>

@@ -370,7 +370,7 @@ DISPLAY_DEVICE * pDisplayDevice, DWORD dwFlags)
 #define MonitorFromRect     xMonitorFromRect
 #define MonitorFromPoint    xMonitorFromPoint
 #define GetMonitorInfo      xGetMonitorInfo
-#define EnumDisplayMonitors xEnumDisplayMonitors
+//#define EnumDisplayMonitors xEnumDisplayMonitors
 #define EnumDisplayDevices    xEnumDisplayDevices
 
 #ifdef __cplusplus

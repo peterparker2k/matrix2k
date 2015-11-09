@@ -13,7 +13,6 @@
 #include <vector>
 
 #include "Matrix/MatrixWindow.h"
-#include "multimonitor.h"
 
 #define SS_MODE_CONFIG		0x0001
 #define SS_MODE_PREVIEW		0x0002
