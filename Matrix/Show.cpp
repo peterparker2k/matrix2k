@@ -426,12 +426,12 @@ bool Show::ShowTitle(bool fullscreen)	//Fullscreen means without matrix in Backg
 {
 # define MESSAGENUM3 6
 	std::string	Message1="T h e  M a t r i x  -  R e l o a d e d#";
-	std::string	Message2="Multi-Monitor Screensaver 2003";
+	std::string	Message2="Multi-Monitor Screensaver 2003-2020";
 	std::string	Message3="Movies by the Wachowski Brothers";
 	std::string	Message4="Send Comments to:";
 	std::string	Message5="burning_Thornbush@yahoo.com";
-	std::string	Message6="http://www.angeltowns.com/members/thornbush";
-	std::string	ClearMsg="                                       ";
+	std::string	Message6="https://github.com/peterparker2k/matrix2k";
+	std::string	ClearMsg="                                          ";
 	int		absLen,len,tempLen;
 
 	static bool SoundStarted=false;		// flag for Sound FX

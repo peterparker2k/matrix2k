@@ -6,10 +6,12 @@
 #include "resource.hm"
 #include "afxres.h"
 
-LANGUAGE 9,1
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+#pragma code_page(1252)
+
+IDI_ICON ICON "matrix2k.ico"
 
 IDB_SPRITES BITMAP DISCARDABLE "Sprtdata.bmp"
-IDI_ICON ICON DISCARDABLE "icon1.ico"
 ID_SOUND_DIAL WAVE DISCARDABLE "DialLoop.wav"
 ID_SOUND_TITLE WAVE DISCARDABLE "Title_mini.wav"
 ID_SOUND_SEARCH WAVE DISCARDABLE "SearchNumbers.wav"
@@ -30,9 +32,9 @@ BEGIN
   CONTROL "Hello Neo Sequence",IDC_MESSAGE,"Button",WS_VISIBLE|WS_TABSTOP|BS_AUTOCHECKBOX,12,86,82,10
   CONTROL "Matrix Code",IDC_CODE,"Button",WS_VISIBLE|WS_TABSTOP|BS_AUTOCHECKBOX,12,102,69,10
   CONTROL "Restore defaults",ID_DEFAULT,"Button",WS_CHILD|WS_VISIBLE|WS_TABSTOP,123,221,62,14
-  CONTROL "The Matrix2k Screensaver V2.22  (c) by burning_Thornbush 2003",IDC_STATIC,"Static",WS_CHILD|WS_VISIBLE|WS_GROUP|SS_CENTERIMAGE|SS_CENTER,50,4,208,9
-  CONTROL "Contact: burning_Thornbush@yahoo.com",IDC_STATIC,"Static",WS_CHILD|WS_VISIBLE|WS_GROUP|SS_CENTERIMAGE|SS_CENTER,86,25,137,8
-  CONTROL "http://pp2k.host56.com/matrix/",IDC_STATIC,"Static",WS_CHILD|WS_VISIBLE|WS_GROUP,109,15,90,9
+  CONTROL "The Matrix2k Screensaver V2.23  (c) by burning_Thornbush 2003-2020",IDC_STATIC,"Static",WS_CHILD|WS_VISIBLE|WS_GROUP|SS_CENTERIMAGE|SS_CENTER,30,4,228,9
+  CONTROL "Contact: burning_thornbush@yahoo.com",IDC_STATIC,"Static",WS_CHILD|WS_VISIBLE|WS_GROUP|SS_CENTERIMAGE|SS_CENTER,86,25,137,8
+  CONTROL "https://github.com/peterparker2k/matrix2k",IDC_STATIC,"Static",WS_CHILD|WS_VISIBLE|WS_GROUP,86,15,137,9
   CONTROL "",IDC_EDIT,"Edit",WS_CHILD|WS_VISIBLE|WS_VSCROLL|WS_TABSTOP|ES_WANTRETURN|ES_AUTOHSCROLL|ES_AUTOVSCROLL|ES_MULTILINE,136,62,163,43,WS_EX_CLIENTEDGE
   CONTROL "",IDC_TELNO,"Edit",WS_CHILD|WS_VISIBLE|WS_TABSTOP,258,156,44,12,WS_EX_CLIENTEDGE
   CONTROL "Telephonenumber to search for(max. 10):",IDC_STATIC,"Static",WS_CHILD|WS_VISIBLE|WS_GROUP,119,156,130,8
@@ -50,14 +52,15 @@ BEGIN
 END
 
 VS_VERSION_INFO VERSIONINFO
-FILEVERSION 2,2,2,0
-PRODUCTVERSION 2,2,2,0
-FILEOS 0x00040004
-FILETYPE 0x00000001
+FILEVERSION 2,2,3,0
+PRODUCTVERSION 2,2,3,0
+FILEOS 0x4L
+FILETYPE 0x1L
+FILESUBTYPE 0x0L
 BEGIN
   BLOCK "StringFileInfo"
   BEGIN
-    BLOCK "040904B0"
+    BLOCK "000004B0"
     BEGIN
       VALUE "CompanyName", "burning_Thornbush\0"
       VALUE "FileDescription", "Matrix - Screensaver\0"
@@ -65,8 +68,8 @@ BEGIN
       VALUE "InternalName", "matrix_reloaded\0"
       VALUE "LegalCopyright", "Copyright © 2003\0"
       VALUE "OriginalFilename", "matrix_reloaded.scr\0"
-      VALUE "ProductName", "burning_Thornbush ScreenSaver\0"
-      VALUE "ProductVersion", "2, 2, 2, 0\0"
+      VALUE "ProductName", "burning_Thornbush's Matrix2k ScreenSaver\0"
+      VALUE "ProductVersion", "2, 2, 3, 0\0"
     END
   END
   BLOCK "VarFileInfo"
