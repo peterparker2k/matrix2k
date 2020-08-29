@@ -19,7 +19,7 @@
 #define CHARWIDTH	16
 #define CHARHEIGHT	24
 
-class CScreen  
+class CScreen
 {
 public:
 	int GetIntensity(int x, int y);
@@ -34,9 +34,11 @@ public:
 	void Print(int x, int y, std::string str,int intensity=0);
 	void PrintLen(int x, int y, std::string str, int len,int intensity=-1);
 	void VPrint(int x, int y, std::string str,int intensity=0);
-	void ShowScreen(CBob *Letter, CBob* Cursor);
+	void ShowScreen(CBob *Letter, CBob* Cursor, int screen_index);
 	void Scroll(int Line);
 	void Clear();
+	virtual void transformMultiScreen();
+	RECT clipRectangle(RECT src, RECT clip);
 	void SetChar(int x, int y, int wert, int intensity=0);
 	CScreen(int x, int y);
 	virtual ~CScreen();
@@ -45,6 +47,7 @@ private:
 	int* m_ptrMemory;
 protected:
 	RECT* UpdateArea;
+	std::vector<RECT*> monitor_dimensions;
 	bool IsVisible(int x, int y);
 	bool m_bolCryptic;
 	int Translate(int Zeichen);

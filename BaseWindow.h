@@ -12,7 +12,7 @@
 #include <windows.h>
 #include "resource.h"
 
-class BaseWindow  
+class BaseWindow
 {
 private:
 	static bool isRegistered;
@@ -25,6 +25,7 @@ protected:
 	DWORD	dwExStyle;
 	DWORD	dwStyle;
 	RECT	rctPosition;
+	int 	screen_index;
 public:
 	HWND	getWindowHandle();
 	void	setParentHandle(HWND h);
@@ -34,7 +35,7 @@ public:
 	DWORD	getStyle(bool getExStyle=false);
 	void	setStyles(DWORD exStyle=-1, DWORD style=-1);
 
-	bool	createWindow();
+	bool	createWindow(int screen_index);
 	int		MessageLoop();
 
 	BaseWindow();

@@ -144,6 +144,7 @@ bool Show::ShowTheMatrix(bool timeout)
 		iTimer=-1;
 		return false;
 	}
+	SetCrypto(false);
 }
 
 bool Show::ShowPhone()

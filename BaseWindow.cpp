@@ -98,9 +98,9 @@ bool BaseWindow::registerWindow()
 
 // TODO: TitleString into Basewindow::strTitle
 
-bool BaseWindow::createWindow()
+bool BaseWindow::createWindow(int screen_index)
 {
-
+	this->screen_index = screen_index;
 	BaseWindow* w=this;
 // Install the CBT hook
 // Note: hook the thread immediately before, and unhook it immediately after CreateWindow call.

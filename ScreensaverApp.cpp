@@ -60,7 +60,7 @@ int ScreensaverApp::run()
 			vecDisplays[0]->Window.setPosition(rcPos);
 			vecDisplays[0]->Window.setScreensaverMode(iScreensaverMode);
 
-			if (vecDisplays[0]->Window.createWindow())
+			if (vecDisplays[0]->Window.createWindow(0))
 				retVal=vecDisplays[0]->Window.MessageLoop();
 		}
 		break;
@@ -88,7 +88,7 @@ int ScreensaverApp::run()
 				for (unsigned int x=0;x<vecDisplays.size();x++)
 				{
 					vecDisplays[x]->Window.setScreensaverMode(iScreensaverMode);
-					vecDisplays[x]->Window.createWindow();
+					vecDisplays[x]->Window.createWindow(x);
 				}
 			} else {
 				RECT rcAll;
@@ -111,7 +111,7 @@ int ScreensaverApp::run()
 				rcAll.right-=rcAll.left;
 				vecDisplays[0]->Window.setPosition(rcAll);
 				vecDisplays[0]->Window.setScreensaverMode(iScreensaverMode);
-				vecDisplays[0]->Window.createWindow();
+				vecDisplays[0]->Window.createWindow(-1);
 			}
 		}
 		retVal=vecDisplays[0]->Window.MessageLoop();

@@ -32,7 +32,7 @@ public:
 };
 
 
-class ScreensaverApp  
+class ScreensaverApp
 {
 private:
 	bool isSingleInstance();
@@ -42,13 +42,13 @@ private:
 	static bool CALLBACK MonitorEnum(HMONITOR hMonitor, HDC hdcMonitor, LPRECT lprcMonitor, LPARAM dwData);
 	static bool isInitialized;
 	int InterpreteCommandLine();
-	HWND parentHwnd;	
+	HWND parentHwnd;
 protected:
 	int iScreensaverMode;
 public:
 	ScreensaverApp();
 	virtual ~ScreensaverApp();
-
+	static std::vector<MonitorInfo*> getDisplays(){return vecDisplays;}
 	virtual int init();
 	virtual int run();
 	virtual int exit();

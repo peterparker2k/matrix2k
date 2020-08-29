@@ -7,7 +7,7 @@
 //////////////////////////////////////////////////////////////////////
 // Construction/Destruction
 //////////////////////////////////////////////////////////////////////
- 
+
 MatrixWindow::MatrixWindow()
 {
 	ilter=0;
@@ -62,7 +62,7 @@ void MatrixWindow::UpdateFunction(int dTime)
 {
 	Cursor.NextFrame();
 	Screen->TheMatrixShow(dTime);
-	Screen->ShowScreen(&Text, &Cursor);	// Zeigt den Textbildschirm an....
+	Screen->ShowScreen(&Text, &Cursor, screen_index);	// Zeigt den Textbildschirm an....
 }
 
 void MatrixWindow::loadGFX(HWND GMainHwnd, int wid, int hei)
@@ -74,7 +74,7 @@ void MatrixWindow::loadGFX(HWND GMainHwnd, int wid, int hei)
 	ReleaseDC(GMainHwnd, dc);
 
 	Screen=new Show(wid/CHARWIDTH,hei/CHARHEIGHT);
-
+	Screen->transformMultiScreen();
 	Team.destination=GMainHwnd;
 	Team.sourceDC=src;
 	Team.AddAnimationRect(368,289,639,479);
